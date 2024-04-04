@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+
+:root {
+    --color-body: #264d73;
+    --color-heading: #000066;
+    --color-base: #e6e6ff;
+    --color-base2: #264d73;
+    --color-brand: #0a2a43;
+    --color-brand2: #deff58;
+    --sidbar-width: 100px;
+    --font-base: "Bai Jamjuree";
+}
+
+body {
+    background :linear-gradient(to bottom,rgba(255, 255, 255, 0.2), rgba(23, 98, 155, 0)), url(../images/u.jpeg);
+   z-index:0;
+   color: var(--color-body);*/
+    font-family: var(--font-base), sans-serif;
+ /*   background-image:  url(../images/r.jpg);
+    background :linear-gradient(to bottom,rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)),url('https://th.bing.com/th/id/OIP.owmrmCGv9a8tgKkLDsFUPAAAAA?w=330&h=500&rs=1&pid=ImgDetMain');*/
+/*background-size:cover;
+         background-repeat: no-repeat;*/
+         max-width: 100%;
+         height: auto; /*
+        -webkit-animation: slidein 100s;
+        animation: slidein 100s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;              
+}
+
+@-webkit-keyframes  bg-scrolling-reverse {
+from {background-position: top; background-size:1500px; }
+to {background-position: -10px 0px;background-size:2750px;}
+}
+
+@keyframes slidein {
+from {background-position: top;background-size:1500px; }
+to {background-position: -10px 0px;background-size:2750px;}
+
+
+}*/
+@import "compass/css3";
+
+body {
+  background-color: #340468;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  perspective: 3.125vmin;
+}
+
+body::after {
+  background-color: #340468;
+  border-radius: 50%;
+  box-shadow: 0 0 2.5vmin 2.5vmin #340468;
+  content: "";
+  height: 2.5vmin;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 2.5vmin;
+}
+
+// Polygon -----------------------------
+
+.polygon {
+  animation: 4s linear infinite polygon;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform-style: preserve-3d;
+  transform: rotatex(90deg) rotatey(0) translatey(-25vmin);
+}
+
+@keyframes polygon {
+  100% {
+    transform: rotatex(90deg) rotatey(360deg) translatey(0);
+  }
+}
+
+// Side --------------------------------
+
+$n: 16; // number of sides
+$r: 25vmin; // inradius (apothem)
+$a: 2 * $r * tan(180deg / $n); // side length
+
+.side {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/231848/fractal-fire-sky-seamless-background.jpg);
+  background-size: ($n * $a) 25%;
+  filter: hue-rotate(-10deg);
+  height: 100vmin;
+  position: absolute;
+  transform-origin: 0;
+  width: calc(#{$a} + 1px);
+
+  @for $i from 1 through $n {
+    &:nth-child(#{$i}) {
+      background-position: ($a * $i * -1) 0;
+      transform: rotatey(360deg / $n * $i) translate3d(-50%, -50%, $r);
+    }
+  }
+}
+
+}
+h1,h2,h3,h4,h5,h6 {
+    color: var(--color-heading);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-body);
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: var(--color-brand);
+}
+
+/*img {
+    max-width: 100%;
+    height:auto;
+    background-size:cover;
+    
+}*/
+
+.text-brand {
+    color: var(--color-brand);
+}
+
+.bg-base {
+    background-color: var(--color-base);
+}
+
+.full-height {
+    min-height: 50vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    
+}
+.full-height1 {
+    
+    
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    
+}
+.full-height2 {
+    
+    
+    justify-content: center;
+    padding-top:30px;
+    padding-bottom: 100px;
+    
+}
+
+
+
+
+.shadow-effect {
+    transition: all 0.5s;
+}
+
+.shadow-effect:hover {
+    box-shadow: -6px 6px 0 0 var(--color-brand);
+}
+
+.iconbox {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background-color: var(--color-brand);
+    color: var(--color-base);
+}
+
+/* NAVBAR */
+.navbar {
+    /*background-color: var(--color-base);*/
+}
+
+.navbar .nav-link {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.navbar .nav-link:hover {
+    color: var(--color-brand);
+}
+
+.navbar .nav-link.active {
+    color: var(--color-brand);
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        min-height: 100vh;
+        width: var(--sidbar-width);
+        background: linear-gradient(to bottom, white,transparent), url(../images/moonn.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .navbar-brand img {
+        border: 8px solid var(--color-brand);
+    }
+
+    /* CONTENT WRAPPER */
+    #content-wrapper {
+        padding-left: 100px;
+      /* background :linear-gradient(to bottom, rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0))), url(../images/s1.jpg);*/
+
+    }
+}
+
+/* BTN */
+.btn {
+    padding: 12px 28px;
+    font-weight: 700;
+    background :linear-gradient(to bottom, white,transparent), url(../images/t1.jpg);
+    z-index: 2000;
+
+}
+
+.btn-brand {
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+    color: var(--color-base);
+}
+
+.btn-brand:hover,
+.btn-brand:focus {
+    background-color: var(--color-brand2);
+    color: var(--color-base);
+    border-color: var(--color-brand2);
+}
+
+.link-custom {
+    font-weight: 700;
+    position: relative;
+}
+
+.link-custom::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.1s;
+}
+
+.link-custom:hover::after {
+    width: 100%;
+}
+
+/* CARD */
+.card-custom .card-custom-image {
+    overflow: hidden;
+}
+
+.card-custom .card-custom-image img {
+    transition: all 0.1s ease;
+}
+
+.card-custom:hover .card-custom-image img {
+    transform: scale(1.1);
+}
+
+/* CONTACT */
+#contact .form-control {
+    background-color: var(--color-base);
+    border-color: var(--color-base);
+    color: var(--color-body);
+}
+
+#contact .form-control:focus {
+    border-color: var(--color-brand);
+    box-shadow: none;
+}
+
+#contact .form-control::placeholder {
+    color: var(--color-body);
+}
+
+#contact input.form-control {
+    height: 44px;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-base);
+    border-radius: 100px;
+    font-size: 24px;
+}
