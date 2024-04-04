@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Effect</title>
+    
+    <link rel="stylesheet" href="Moon-parallax-effect.css">
+       
+    <link rel="stylesheet" href="./assets/css/aos.css">
+    <link rel="stylesheet" href="btstyle.css">
+    <link rel="stylesheet" href="./assets/css/line-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+    
+    <style>
+  
+.overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-height:3000px;
+        min-width: 100%;
+        z-index: 10;
+        
+      }
+.modal2 {
+        
+        
+        position:relative;
+        top:60px;
+        
+        width:100%;
+        height:auto;
+        background :linear-gradient(to bottom,rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0));
+        
+        
+        z-index: 11;
+      }   
+.containerr1 {
+  position: relative;
+  max-width: 100%;
+  height :3000px;
+  
+  /* 16:9 Aspect Ratio */
+}
+
+.modal1{
+ position: absolute;
+  top:1px;
+  
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background :rgba(0, 0, 0, 0.2);
+        
+
+
+}
+.responsive-iframe {
+  position: absolute;
+  top:10px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+</style>
+</head>
+
+<body>
+<div>
+     <!------ Moon parallax effect ------>
+     <section id="Moon-parallax-effect">
+        <section id="section">
+        <img src="moon/r1.jpg" style="position:absolute; top:10px; z-index:2" id="r1">
+        <img src="moon/moon.png" style="position:absolute; top:10px; z-index:10000" id="moon">
+        <!--<img src="moon/m1.jpg" id="m1">-->
+
+        <!--<img src="moon/mountain.png" id="mountain">-->
+       <break></break>
+              <img src="moon/cloud1.png" style="position:absolute; top:100px; z-index:1" id="c1">
+              <img src="moon/cloud2.png" style="position:absolute; top:100px; z-index:2" id="c2">
+              <img src="moon/cloud3.png" id="c3">
+              <img src="moon/cloud4.png" id="c4">
+     
+        
+        </section>
+    
+    </section>
+
+
+    <!------ Moon parallax effect ------>
+    <script type="text/javascript">
+        let bg = document.getElementById("r1");
+        let moon = document.getElementById("moon");
+      <!--  let mountain = document.getElementById("mountain");-->
+        let c1 = document.getElementById("c1");
+        let c2 = document.getElementById("c2");
+        let c3 = document.getElementById("c3");
+        let c4 = document.getElementById("c4");
+        let text = document.getElementById("text");
+
+        window.addEventListener('scroll', function() {
+            var value = window.scrollY;
+
+            bg.style.top = value * 0.5 + 'px';
+            moon.style.left = -value  * 3 + 'px';
+           <!-- mountain.style.top = -value * 0.15 + 'px';-->
+            c1.style.right = -value * 2 + 'px';
+            c2.style.right =-value * 2 + 'px';
+            c3.style.right =-value * 2 + 'px';
+            c4.style.right =-value * 2 + 'px';
+            text.style.top = value * 3 + 'px';
+        })
+    </script>
+
+
+<!--<div w3-include-html="index.html"></div>--> 
+<div class="containerr1">
+<iframe class="overlay" src="td.html" frameborder="0" scrolling="no"></iframe>
+<!--<iframe class="modal" frameborder="0" height="100%" width="100%"></iframe>-->
+<div class="modal2">
+<!--<iframe class="modal1" src="index.html" frameborder="0"></iframe>
+<div class="modal1">
+<object data="index.html" height="700" width="100%"></object>-->
+
+<div class="modal2">
+<div class="modal1">
+    <div id="content-wrapper">
+
+        <!-- HOME -->
+
+        <section id="home" class="full-height">
+            
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10">
+                         <h2 class="display-4 fw-bold" data-aos="fade-up" data-aos-delay="300"> Hi there, I'm Sulana </h2>
+                        <p class="display-5" data-aos="fade-up">I'm a <span class="text-brand1" >CSE
+                                </span> graduate.</p>
+                       
+                        <div data-aos="fade-up" data-aos-delay="600">
+                            <!--lead mt-2 mb-4<a href="#work" class="btn btn-brand me-3">Explore My Work</a>-->
+                           <!-- <p>Ping m<a href="#" class="link-custom">sulanasundari@gmail.com</a></p>-->
+               <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                       <p>Ping me @  <a href="mailto:sulanasundari@gmail.com" class="link-custom">sulanasundari@gmail.com</a></p>
+                     </div>
+                     <div class="col-auto">
+                        <p>Let's connect</p>
+                   
+                        <div class="social-icons">
+                           <!-- <a href="#"><i class="lab la-twitter"></i></a>-->
+                            <a href="https://sulana22.wordpress.com"><i class="lab la-wordpress"></i></a>
+                            <a href="https://www.linkedin.com/in/sulana-sundari-chandarshekar/"><i class="lab la-linkedin"></i></a>
+                            <a href="#"><i class="lab la-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- //HOME -->
+
+         <!-- ABOUT -->
+        <section id="about" class="full-height1">
+            <div class="container">
+
+              <!--  <div class="row pb-4" data-aos="fade-up">
+                    <div class="col-lg-8">
+                        <h6 class="text-brand">ABOUT</h6>
+                        <h1>Education </h1>
+                    </div>
+                </div>-->
+
+                <div class="row gy-5">
+                    <div class="col-lg-6">
+
+                        <h3 class="mb-4" data-aos="fade-up" data-aos-delay="200">Education</h3>
+                        <div class="row gy-4">
+
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h6>B.E Computer Science</h6>
+                                    <p class="text-brand mb-2">Kumaraguru College Of Technology (2019 - 2023)</p>
+                                    <p class="mb-0"> Affiliated to Anna University</p>
+                                </div>
+                            </div>
+
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h6> Indian School Certificate (Grade 12)</h6>
+                                    <p class="text-brand mb-2">K’sirs International School, Coimbatore.</p>
+                                    <p class="mb-0">Board Of Examinaton : ISC</p>
+                                    <p class="mb-0">Year Of Passing : 2019</p>
+                                </div>
+                            </div>
+
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h6>Indian Certificate of Secondary Education (Grade 10)</h6>
+                                    <p class="text-brand mb-2"> K’sirs International School, Coimbatore.</p>
+                                    <p class="mb-0"> Board Of Examinaton : ICSE </p>
+                                   <p class="mb-0">Year Of Passing : 2017</p>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row gy-5">
+
+                        <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Certifications</h3>
+                        <div class="row gy-4">
+
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                  <h6>Crash Course on Python certified by Google.</h6>
+                                  <p class="mb-0"></p>
+                                     <a href="https://www.coursera.org/account/accomplishments/certificate/EU2AZXBYRXBU">Certificate</a>
+                                     <p class="text-brand3 mb-2"> </p>
+                                  
+                                </div>
+                            </div>
+
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="300">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                              <p> </p>
+
+                                    <h6>Data Structures course certification offered by University of California San Diego.</h6>
+                                    <p class="text-brand3 mb-2"> </p>
+
+                                    <a href="https://www.coursera.org/account/accomplishments/certificate/HD29PJ3E56ST"> Certificate </a>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="400">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h6>Database Management Essentials certification offered by University of Colorado System.</h6>
+                                  <p class="mb-0"></p>
+                                    <a href="https://www.coursera.org/account/accomplishments/certificate/RX5HTU3VQYZH"> Certificate</a>
+                                  <p class="text-brand3 mb-2"> </p>
+
+                                </div>
+                          </div>
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="500">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h6>Certified for completing the Cisco Networking Academy® Introduction to Packet Tracer course.</h6>
+                                    <p class="text-brand mb-2"> </p>
+                                                                   </div>
+
+                            
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- //ABOUT -->
+
+        <!-- WORK -->
+        <section id="work" class="full-height2">
+            <div class="container">
+
+                <div class="row pb-4" data-aos="fade-up">
+                    <div class="col-lg-8">
+                       <!-- <h6 class="text-brand">WORK</h6>-->
+                        <h3> Projects</h3>
+                    </div>
+                </div>
+
+                <div class="row gy-4">
+                   <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                           <!-- <div class="card-custom-image rounded-4">
+                                <img class="rounded-4" src="./assets/images/project-4.png" alt="">
+                            </div>-->
+                            <div class="card-custom-content p-4">
+                                <h4>Vehicle Identification and Surveillance Using Efficient Machine Learning Techniques</h4>
+                                <p>The purpose of this project is to improve vehicle identification and provide better surveillance which can serve as an alternative for manual intervention or surveillance, in case of identification in certain areas, such as government buildings, corporate buildings or gated communities, where there is need for heavy surveillance. The objective is to make an automatic vehicle identification that is to identify a vehicle entering based on features such as make and model, color and license plate to increase the accuracy of vehicle identification by incorporating convolution neural networks.</p>
+                              <p> <span class="text-brand1"> View here --> </span> <a href="https://ieeexplore.ieee.org/document/10200767" class="link-custom" style="color :#ffff">Journal paper</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-up">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                           <!-- <div class="card-custom-image rounded-4">
+                                <img class="rounded-4" src="">
+                            </div>-->
+                            <div class="card-custom-content p-4">
+                                <h4>Mini Home Automation </h4>
+                                <p>This project is an IOT embedded miniature home automation system. This Wi-Fi based mini home automation can help you control & monitor the real-time feedback through the Google Home and Alexa App. The implementation allows you to control the appliances like lights with voice commands through phones and manually with switches.</p>
+                              <!--  <a href="#" class="link-custom"></a>-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                               <div class="card-custom-content p-4">
+                                <h4>Hotel Automation System</h4>
+                                <p>The implementation focuses on simplifying the day-to-day processes of the hotel, the application allows easy usage of handling hotel activities online such as managing the booking and allotment of rooms. The customers can book rooms through a login portal and admins can manage allotment and cancelations through an admin portal.</p>
+                             <!--   <a href="#" class="link-custom">Read More</a>-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" data-aos="fade-up">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                             <div class="card-custom-content p-4">
+                                <h4>Mini Library management system</h4>
+                                <p>A small-scale library management system using PHP and MySQL for managing and storing information on a mini library, the library system database needs to store the details about its employee, books, Issue of books, customers, book status. The system enables employees to manage the records of books available, customers who borrowed books, the books returned back, the address of its branch, the working employee details. </p>
+                                                            </div>
+                        </div>
+                    </div>
+
+                   
+                </div>
+
+            </div>
+        </section>
+        <!-- //WORK -->
+   
+
+      
+
+     
+
+    </div>
+
+</div>
+</div>
+</div>
+  
+     <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./assets/js/aos.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+</body>
+</html>

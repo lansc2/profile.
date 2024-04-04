@@ -1,0 +1,78 @@
+<html>
+<head>
+<style>
+.full-width {
+    position: relative;
+    width:100%;
+    height: 100%;
+    
+}
+img.imgone {
+    position:absolute;
+    max-width: 100%;
+    height:100%;
+   transform:rotate(180deg);
+   
+        
+}
+    img.imgtwo {
+        position: absolute;
+        width: 100%;
+        height: autox;
+        top: 5px;
+        z-index: 0;
+        transform: rotate(180deg);
+        animation: animate calc(8s * var(--i)) linear infinite;
+        transform: rotate(180deg);
+    }
+    .im {
+        position: absolute;
+        width: 1300px;
+        height: auto;
+        right:0;
+        transform: rotate(180deg);
+    }
+    img.imgtw {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        right: 180px;
+        transform: rotate(180deg);
+        animation: animate calc(8s * var(--i)) linear infinite;
+        transform: rotate(180deg);
+    }
+    img.imgt {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        transform: rotate(180deg);
+        z-index: 0;
+        animation: animate calc(8s * var(--i)) linear infinite;
+        transform: rotate(180deg);
+    }
+
+    @keyframes animate {
+        0% {
+            transform: rotate(180deg) translateX(100%);
+        }
+
+        100% {
+            transform: rotate(180deg) translateX(-100%);
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="full-width">
+
+        <img class="imgone" src="p1.jpg" />
+        <img class="imgtwo" src="cloud4.png" style="--i:4;" />
+        <img class="imgtw" src="cloud3.png" style="--i:3;" />
+        <img class="imgt" src="cloud2.png" style="--i:2;" />
+        <img class="imgtwo" src="cloud1.png" style="--i:1;" />
+        <img class="imgtwo" src="cloud5.png" style="--i:4;" />
+        <!--<img class="im" src="cloud5.png" />
+        <img class="im" src="cloud4.png" />-->
+    </div>
+</body>
+</html>
