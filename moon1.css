@@ -9,10 +9,10 @@
     min-height: 740px;
 }
 
-#section {
+#section1 {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     
     overflow: hidden;
   /* display: flex;*/
@@ -20,7 +20,7 @@
     align-items: center;
 }
 
-#section:before {
+#section1:before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -30,7 +30,7 @@
     z-index: 0;
 }
 
-#section:after {
+#section1:after {
     content: '';
     position: absolute;
     top: 0;
@@ -42,7 +42,7 @@
     mix-blend-mode: normal;
 }
 
-#section img {
+#section1 img {
     position: absolute;
     top: 0;
     left: 0;
