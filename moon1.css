@@ -6,7 +6,7 @@
     font-family: 'Poppins', sans-serif;
     background: #ffff;
  /*#0a2a43;*/
-    max-height: 740px;
+    min-height: 740px;
 }
 
 #section {
