@@ -15,9 +15,9 @@
     height: 100%;
     width: -webkit-fill-available;
     overflow: hidden;
-   /* display: flex;*/
-    justify-content: center;
-    align-items: center;
+   display: flex;
+  /*  justify-content: center;
+    align-items: center;*/
 }
 
 #section:before {
